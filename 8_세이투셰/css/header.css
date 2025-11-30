@@ -1,0 +1,32 @@
+header{width:100%;
+    height:90px;
+    border-bottom:1px solid #000000;
+    position:fixed;
+    /* background-color: #123608;} */
+    background:rgba(255,255,255,0.8);}
+
+nav{width:33%;
+    float: left;}
+    /* background-color: #abcdaa;} */
+nav li{width:25%;
+        float: left;
+        font-size:20px;
+        text-align: center;
+        line-height: 90px;} /*line-height는 실사이즈에 영향을 줌*/
+        /*margin top 으로도 적용가능! => 가로 배열했기 때문에 상속안됨!*/
+
+.logo{width:200px;
+    margin-top:20px; /*실사이즈에 영향X->중앙정렬*/
+    margin-left:-100px;    
+    position:absolute;
+    left:50%;}
+.logo img{width:100%;}
+
+.join_us{width:33%;
+        float: right;}
+        /* background-color: #abcdaa;} */
+.join_us li{width:25%;
+            margin-top:37px; /*전체 면적-글자크기/2*/
+            float: left;
+            font-size:20px;
+            text-align: center;}

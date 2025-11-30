@@ -1,0 +1,78 @@
+article{margin:0 auto;}
+.content li{float:left;
+                margin-top:1.25%;
+                margin-left:1.25%;} /*쓰고 보니 마진레프트가 동일 ->겹치면 가장 위에 정리*/
+.content li img{width:100%;}
+
+
+.ad_wrap{width:95%;
+        margin:0 auto;
+        margin-top:130px;} /*header와 겹치지않게 내림*/
+.main_ad img{width:100%;}
+
+.sub_ad{margin:20px 0;}
+/* margin-top과 bottom을 한번에 20px넣음!! margin(세로값 가로값) */
+/*위아래 단락(ex.section/ad_wrap)이 서로 같은 margin을 주면
+변동 없으니 한쪽에만 주거나, 동일하지 않은 크기로 넣어야함!!*/
+
+.sub_ad ul{display:flex;}  /*flex는 화면크기 줄어들어도 갯수 그대로 유지*/
+.sub_ad li{width:24.25%;
+                margin-left:1%;}
+.sub_ad li:nth-child(1){margin-left:0;}
+.sub_ad li img{width:100%;}
+
+section:nth-child(4){margin-top:40px;  /* 모든 section 중에서 4번째인 section을 선택해야함!! */
+                        /* margin-top:20px을 넣으면 위 단락에 이미 
+                        margin이 있기 때문에 작동 X => 늘리고 싶으면 더 큰 값 마진 넣기!*/
+                        background-color:#959595;}
+
+section:nth-child(4) article{width:95%;
+                                padding-bottom:80px;}
+                                /* margin:0 auto; 공통된 선택자로 생략 */
+
+.content_title{padding-top:80px;
+                font-size:35px;
+                line-height:80px;}
+section:nth-child(4) .content li{width:19%;
+                                margin-left:1.25%;} /*강력한 선택자가 있기 때문에 이건 넣어야함*/
+section:nth-child(4) .content li:nth-child(1){margin-left:0;}
+
+article{width:85%;}
+.content li{width:32.5%;}  /* margin-left:1.25%; 여백은 균일하게 */
+.content li:nth-child(1){margin-left:0;}
+.content li:nth-child(n+4){width:24.0625%;} /* margin-left:1.25%; 공통된 내용 위에 작성 */
+.content li:nth-child(4n+4){margin-left:0;}
+
+.sub_ad_2 ul{display:flex;}
+.sub_ad_2 li{width:50%;}
+.sub_ad_2 li img{width:100%;}
+/*2개이미지 크기가 다를 경우, float는 각각 사이즈 비율 계산해야함 // flex줘서 알아서 사이즈 맞추도록!!*/
+
+
+@media only screen and (max-width:1280px)and (min-width:760px){
+    .ad_wrap{width:100%;}
+    section:nth-child(4){margin-top:20px;}
+    section:nth-child(4) article{padding-bottom:50px;}
+    .content_title{padding-top:50px;
+                  font-size:28px;
+                  line-height:60px;}
+}
+
+@media only screen and (max-width:759px){
+   /*flex사용한 것을 다시 레이아웃을 바꿀 수 없음 ex. sub-ad*/
+   section:nth-child(4) article{padding-bottom:50px;} 
+   .content_title{padding-top:45px;
+                  font-size:20px;
+                  line-height:40px;}
+    section:nth-child(4) .content li{width:49.375%;}
+                                /* margin-left:1.25%;반복되는 코드 지우기 */
+    section:nth-child(4) .content li:nth-child(2n+1){margin-left:0;}
+    section:nth-child(4) .content li:nth-child(5){display:none;}
+    
+    article{width:95%;}
+    .content li:nth-child(n+4){width:32.5%;} /*4바이2줄을 3*1로 통일*/
+    .content li:nth-child(4n+4){margin-left:1.25%;} 
+    .content li:nth-child(3n+1){margin-left:0;} /*기존 마진 0 부여했던 곳에 기존 마진을 부여하고 바꿔야함*/
+}
+
+/* 공통된 css는 빼고 복붙 후 필요한 소스만 두고 지우기!! */

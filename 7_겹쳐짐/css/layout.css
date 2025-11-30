@@ -1,0 +1,41 @@
+*{margin:0; padding:0;}
+li{list-style:none;}
+.clearfix::after{display:block; content:""; clear:both;}
+
+article{width:1660px;
+        height:400px;
+        margin-top: -200px;
+        margin-left: -830px;   /*브라우저의 정중앙*/
+        position:absolute;
+        top:50%;
+        left:50%;
+        background-color: #959595;}
+
+li{width:400px;
+    height:400px; 
+    /* position: absolute사용시 부모태그에 가로세로값 줘야함 */
+    margin-left:20px;
+    float:left;}
+li:nth-child(1){margin-left:0;}
+li:hover .text_box{display:block;}
+li .box{position:absolute;
+        display:block;}
+/* 가로세로값이 필요하려면 블록태그 활용해야함 그렇지만 원래 a태그 안에 넣는거라 인라인태그 활용 -> display:block;으로 바꿔줌 */
+li .text_box{width:400px;
+            height: 400px;
+            /* background-color: #123456; */
+             /* opacity: 0; */
+            background:rgba(0,0,0,0.5); 
+            /* 배경색을 투명하게 만들고 싶은 경우 -> 절대로 opacity 0 사용하지 않음!! 부모에게 적용하면 자식에게 상속되기 때문!!
+            -->따라서, background:rgba(레드값, 그린값, 블루값, 투명도)사용
+               레드 그린 블루는 0~255, 투명도는 0~1사이의 값 */
+            font-size:100px;
+            color:#fff;
+            display:none;}
+li img{width: 400px;}
+
+/* <동작을 만드는 순서>
+  1.눈에 보이는 상태로 제작 (이벤트가 작동된 후, 사람이 조작한 후)
+  2. 눈에 안보이는 상태로 제작(이벤트가 작동되기 전) ==>text_box에 display:none;삽입
+  3. 동작삽입==>li:hover .text_box{display:block;} li중에 마우스 올라간 것만 textbox만 보이게!
+  **%사용할 수 없음!! px정확한 크기 필요!! ==> 반응형 적응형에는 불가! 고정형에 가능*/

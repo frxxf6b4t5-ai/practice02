@@ -1,0 +1,28 @@
+트렌지션 애니메이션,트렌지션관련 내용
+http://www.the-art-of-web.com/css/css-animation/#.Ufm1yJLxqlg
+@-webkit-transition-duration:1s;
+@-moz-transition-duration:1s;
+@-o-transition-duration:1s;
+@-ms-transition-duration:1s;
+
+transition-timing-function:linear -> 동일한 속도
+transition-timing-function:ease -> 점차 빨라지다가 느려짐
+transition-timing-function:ease-in -> 시작이 느리게
+transition-timing-function:ease-in-out -> 시작과 끝이 느리게
+transition-timing-function:ease-out -> 끝이 느리게
+※ease -> 느리게
+  in -> 시작
+  out -> 끝
+
+시간당 거리 그레프 확인 주소
+cubic-bezier.com
+
+애니메이션 예제 30가지 확인 경로
+http://simbyone.com/demo/30-css-page-preload-animations/
+
+브라우저별 버전경우 사용 방법
+@-ms-transition-duration:2s;
+@-moz-transitionduration:2s;
+@-o-transitionduration:2s;
+@-webkit-transitionduration:2s;
+transition-duration:2s;

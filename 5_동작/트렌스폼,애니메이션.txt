@@ -1,0 +1,41 @@
+transition-duration -> 시간제어(이벤트 작동 후 동작에 대한 시간제어)
+★★★★★
+이벤트에 적용하게 되는 경우
+-> 이벤트가 작동될때만 시간부여
+
+태그에 적용하게 되는 경우
+-> 이벤트가 작동될때 + 이벤트가 취소될때 모두 시간부여
+-----
+transition-delay -> 시간제어(이벤트 작동 후 동작이 작동전 대기에 대한 시간제어)
+-----
+transform -> 변환제어
+	-> translate(가로값, 세로값) -> 위치제어
+	-> translatex() -> 가로값 위치제어
+	-> translatey() -> 세로값 위치제어 
+-- px단위
+	-> rotate(각도) -> 회전제어/deg단위/45deg(시계방향45도)
+				         /-45deg(반시계방향45도)
+	-> rotatex(각도) -> x축기준 회전
+	-> rotatey(각도) -> y축기준 회전
+	-> skew(각도) -> 기울기제어/deg단위
+	-> skewx(각도) -> x축기준 기울기
+	-> skewy(각도) -> y축기준 기울기
+-- deg단위
+	-> scale(배수) -> 크기제어
+	-> scalex(배수) -> x축만 배수로 크기제어
+	-> scaley(배수) -> y축만 배수로 크기제어
+ 
+animation-name -> 애니메이션 이름제어
+@keyframes 이름{ -> 애니메이션 생성
+   from{
+   }to{
+   }
+
+   10%{}
+   20%{}
+   30%{}
+   40%{}
+}
+animation-duration -> 시간제어
+animation-delay -> 시간제어
+animation-iteration-count -> 반복횟수제어

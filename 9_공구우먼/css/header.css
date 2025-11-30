@@ -1,0 +1,55 @@
+header{width:95%;
+        height:70px;
+        margin-left:-47.5%; /*마진-left는 자기자신이 기준임*/
+        position:fixed;
+        top:0; /*ad에 마진 주기 위해 header에 top값 적용*/
+        left:50%; /*fixed이므로 margin 0 auto;사용 불가 그러므로 left와 margin-left사용*/
+        background-color: #ffffff;
+        /* background:rgba사용불가->로고가 jpg라 배경이있음 */
+        /* background-color: #a59aa9;} */
+        z-index:1;}
+        /*z-index사용법
+          1. z-index:auto 부모가 자식을 업고, 형이 동생을 업는 부여하지 않아도 기본적으로 적용되는 값
+          2. z-index:값 부여 => auto(0)보다 무조건 높다 (음수값은 없다 / 1이상의 정수인 양수만 사용한다)
+          */
+
+header .logo{margin-top:25px;}
+/*원래는 float사용안해서 세로배치기에 margin-top사용불가!!(relative+top사용)=>그러나 부모인 header가 규칙을 무시해서 자식인 logo도 상속이 안됨 => 그러므로 마진탑가능*/
+
+
+
+.nav_wrap{width:100%;
+        height:130px; /*nav+header높이*/
+          border-bottom: 1px solid #dddddd;
+          position:fixed;
+          top:0px;/*nav top에 70px줌*/
+          background-color: #ffffff;} /*header와 겹치지 않게 header높이만큼 아래로 내림*/
+          /* background-color: #abcdef;} */
+
+nav{width:95%;
+     margin:0 auto;
+     position:relative;
+     top:70px;
+     }
+     /* background-color:bisque;} */
+
+nav ul{display:flex;}
+nav li{width:10%;
+        font-size:15px;
+       text-align: center;
+       line-height:60px;}
+nav li:nth-child(1){width:7%;}    /*한개당 10%이므로 두개는 20%-> 그안에서 글자수에 따라 나눠 가지면 됨*/
+nav li:nth-child(10){width: 13%;}
+
+@media only screen and (max-width:1280px) and (min-width:760px){
+        nav li{width: 12.5%;
+                font-size:12px;
+                line-height: 60px;}
+        nav li:nth-child(n+9){display:none;}}
+/* 적응형할 때 min값 기준으로 해야함 */
+
+@media only screen and (max-width:759px){
+        nav li{width: 20%;
+                font-size:12px;
+                line-height: 60px;}
+        nav li:nth-child(n+6){display:none;}}

@@ -1,0 +1,23 @@
+.main_ad{height:100vh;  /*적응형으로 브라우저를 줄이면 이미지가 반복됨->반응형으로 바꿔줘야함*/
+        background-image:url("../img/ad/main.jpg");
+        /* background-size: cover; 이미지 꽉채우는것 */
+        background-size:100%;
+        background-attachment:fixed;}
+        /* background-repeat:none; */
+
+section{height:100vh;} /*100vh를 쓰는 이유는 자식태그에 퍼센트를 부여하기 위해*/
+article{height:100%;} 
+
+.content_title{font-size:25px;
+              text-align: center;
+              line-height:80px;}
+
+
+.content li{width:calc(25% - 1px); /* +-있을 떄 반드시 띄우기!!*/
+            height:calc(50% - 1px);
+            border-top: 1px solid #1b1b1b;
+            border-left: 1px solid #1b1b1b;
+            float:left;}
+.content li img{width:100%;}
+
+/* @media only screen and (max-width:) and (min-width:){} */

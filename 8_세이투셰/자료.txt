@@ -1,0 +1,44 @@
+jsp 뷰 노드
+asp
+phd
+
+홈페이지에 있는 이미지를 복사해서 메모장에 붙여넣기 했을 때, 
+아무 글자도 안나오는 건 => img src="" <<<alt="">>>에 아무것도 쓰여져 있지 않은 것
+
+<nav> 드래그 복사 붙여넣기
+Company
+Archive
+Shop
+Store
+**로고 이미지에 아무것도 쓰여있지 않음**
+((currency icon))KRW
+Contact
+Cart
+Login
+
+
+
+float는 첫째의 위치를 변경하는 것
+float:left; 첫째를 좌측 / float:right; 첫째를 우측
+
+logo중앙-> position:absolute / left : 50% / margin-left:절반px
+
+header -> ★position:fixed => 부모의 세로값 0, 가로값 자식이 존재
+그러므로 header에 width: 100% / height: 100px 부여
+
+★https://fontawesome.com/v4/examples/에서 아이콘 option확인!
+
+background-image를 특정영역에 꽉차게 만들고 싶은 경우
+background-size:cover; 는 이미지가 영역보다 작은 경우에만 사용!!
+그러므로 영역>이미지 크기로 해상도가 깨지게됨
+★따라서 background-size:100%;를 사용하고 이미지가 영역보다 큰걸 줄여야함!
+
+
+==================================================
+원래 반응형(플루이드기법)으로 pc웹화면을 반응형으로 변환함
+삼성 폴드, 폴더블이 나오면서 해상도에 맞게 추가 모바일 반응형 제작해야함**
+=>삼성 폴드 모바일 웹 제작하는 방법 검색해보기
+
+==========================================
+css코딩 컨벤션
+: 사이즈 / 여백 (border포함) / 배치 (float/position/left/...)/배경/타이포/특수성(display)

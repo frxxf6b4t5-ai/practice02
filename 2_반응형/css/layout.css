@@ -1,0 +1,36 @@
+*{margin:0; padding:0;}
+li{list-style:none;}
+.clearfix::after{display:block; content:""; clear:both;}
+
+/*1920px을 기준으로 하는 pc(와이드모니터) 해상도 기준을 기본css로 제작*/
+.content_wrap{width:1280px;
+                margin:0 auto;
+                background-color:#959595;}
+                
+.content ul {display: flex;}
+.content li{width:305px;
+            margin-left:20px;}
+.content li:nth-child(1){margin-left:0;}
+.content li img{width:100%;}
+
+/*1280px보다 작은 패드를 기준으로 반응형 1차 제작*/
+/*pc -> 패드 가는 반응형 / 변화점은 pc에서 패드로 변화*/
+@media only screen and (max-width:1279px) and (min-width:768px){
+    .content_wrap{width:90%;
+                background-color:#123456;}
+    .content_title{text-align:center;
+                    color:#ffffff;}
+
+    .content li{width:49.5%;
+            margin-left:1%;}
+    .content li:nth-child(2n+1){margin-left:0;}
+}
+
+/*768px보다 작은 휴대폰(가로회전)를 기준으로 반응형 2차 제작*/
+/*pc(기존) -> 휴대폰 가는 반응형 / 변화점은 pc(기존)에서 휴대폰로 변화*/
+@media only screen and (max-width:767px){
+    .content_wrap{width:99%;
+                background-color:#987654;}
+    .content li{width:100%;
+                margin-left:0;}
+}
